@@ -1,11 +1,10 @@
 const express = require("express");
-const eventRoutes = require("./apis/event/routes");
+const eventRoutes = require("./apis/Event/routes");
 const connectDB = require("./db/models/database");
 
 const app = express();
 
 app.use(express.json());
-
 app.use("/api/events", eventRoutes);
 connectDB();
 
